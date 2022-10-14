@@ -69,7 +69,7 @@ header a:hover{
     padding: 10px;
 }
 .counter h3{
-    font-size: 13px;
+    font-size: 11px;
 }
 main{
     position: relative;
@@ -123,7 +123,10 @@ main{
     border: 2px solid #bfd5b9;
 
 }
-.card i {
+.disabled{
+    box-shadow: #527555 0px 6px 12px -2px, #527555 0px 3px 7px -3px;
+}
+.card i ,button i{
     font-size: 20px;
 }
  img{
@@ -154,6 +157,10 @@ main{
     align-items: center;
     padding-top: 5px;
 }
+.payment button{
+    background:none;
+    border: none;
+}
 .custom-input{
     display: flex;
     flex-direction: column;
@@ -179,19 +186,20 @@ input[type="number"]::-webkit-inner-spin-button {
     font-weight: bold;
     text-align: center;
 }
-.custom-input i{
+
+.custom-input i:hover{
+    color: #a0caa3;
+}
+.payment button i{
+    cursor: pointer;
+    font-size:25px ;
+    color: #527555;
+}
+.custom-input button i{
     color: #527555;
     font-size: 13px;
     transition: all .5s ease-in-out;
     cursor: pointer;
-}
-.custom-input i:hover{
-    color: #a0caa3;
-}
-.payment>i{
-    cursor: pointer;
-    font-size:25px ;
-    color: #527555;
 }
 /* items.html style */
 a i{
@@ -261,7 +269,6 @@ a i{
 .div{
     width: 100px;
     margin-left: -10px;
-
 }
 .first-row span,.second-row span{
     font-size: 25px;

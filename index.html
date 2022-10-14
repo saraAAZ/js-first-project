@@ -15,13 +15,13 @@
     <body>
         <header>
             <h3>
-                <a href="">show Card</a>
+                <a href="items.html">show Card</a>
             </h3>
             <h2>eDelicious Restaurant</h2>
             <div class="items-counter">
                 <i class="fa-duotone fa-cart-shopping"></i>
                 <div class="counter">
-                    <h3>
+                    <h3 id="items-counter" >
                         0
                     </h3>
                 </div>
@@ -55,98 +55,7 @@
             </div>
 
             <div class="menu-container">
-                <div class="cards">
-                    <div class="card">
-                        <img src="https://foodish-api.herokuapp.com/images/rice/rice33.jpg" alt="image">
-                        <div class="info">
-                            <span>dish name</span>
-                            <span>100$</span>
-                        </div>
-                        <div class="payment">
-                            <div class="custom-input">
-                                <i class="fa-duotone fa-angle-up up-arrow"></i>
-                                <input class="input-num" type="number" min="0" max="15" value="1">
-                                <i class="fa-duotone fa-angle-down down-arrow"></i>
-                            </div>
-                            <i class="fa-duotone fa-cart-plus"></i>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="https://foodish-api.herokuapp.com/images/rice/rice33.jpg" alt="image">
-                        <div class="info">
-                            <span>dish name</span>
-                            <span>100$</span>
-                        </div>
-                        <div class="payment">
-                            <div class="custom-input">
-                                <i class="fa-duotone fa-angle-up up-arrow"></i>
-                                <input class="input-num" type="number" min="0" max="15" value="1">
-                                <i class="fa-duotone fa-angle-down down-arrow"></i>
-                            </div>
-                            <i class="fa-duotone fa-cart-plus"></i>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="https://foodish-api.herokuapp.com/images/rice/rice33.jpg" alt="image">
-                        <div class="info">
-                            <span>dish name</span>
-                            <span>100$</span>
-                        </div>
-                        <div class="payment">
-                            <div class="custom-input">
-                                <i class="fa-duotone fa-angle-up up-arrow"></i>
-                                <input class="input-num" type="number" min="0" max="15" value="1">
-                                <i class="fa-duotone fa-angle-down down-arrow"></i>
-                            </div>
-                            <i class="fa-duotone fa-cart-plus"></i>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="https://foodish-api.herokuapp.com/images/rice/rice33.jpg" alt="image">
-                        <div class="info">
-                            <span>dish name</span>
-                            <span>100$</span>
-                        </div>
-                        <div class="payment">
-                            <div class="custom-input">
-                                <i class="fa-duotone fa-angle-up up-arrow"></i>
-                                <input class="input-num" type="number" min="0" max="15" value="1">
-                                <i class="fa-duotone fa-angle-down down-arrow"></i>
-                            </div>
-                            <i class="fa-duotone fa-cart-plus"></i>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="https://foodish-api.herokuapp.com/images/rice/rice33.jpg" alt="image">
-                        <div class="info">
-                            <span>dish name</span>
-                            <span>100$</span>
-                        </div>
-                        <div class="payment">
-                            <div class="custom-input">
-                                <i class="fa-duotone fa-angle-up up-arrow"></i>
-                                <input class="input-num" type="number" min="0" max="15" value="1">
-                                <i class="fa-duotone fa-angle-down down-arrow"></i>
-                            </div>
-                            <i class="fa-duotone fa-cart-plus"></i>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="https://foodish-api.herokuapp.com/images/rice/rice33.jpg" alt="image">
-                        <div class="info">
-                            <span>dish name</span>
-                            <span>100$</span>
-                        </div>
-                        <div class="payment">
-                            <div class="custom-input">
-                                <i class="fa-duotone fa-angle-up up-arrow"></i>
-                                <input class="input-num" type="number" min="0" max="15" value="1">
-                                <i class="fa-duotone fa-angle-down down-arrow"></i>
-                            </div>
-                            <i class="fa-duotone fa-cart-plus"></i>
-                        </div>
-                    </div>
-                </div>
+                <div class="cards" id="cards">
             </div>
             <script src="https://kit.fontawesome.com/ee25586ac1.js" crossorigin="anonymous"></script>
         </main>
