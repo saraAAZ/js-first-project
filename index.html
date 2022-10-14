@@ -1,14 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+        <script src="script.js" defer></script>
+        <title>Document</title>
+    </head>
+    <body>
+        <header>
+            <h3>
+                <a href="">show Card</a>
+            </h3>
+            <h2>eDelicious Restaurant</h2>
+            <div class="items-counter">
+                <i class="fa-duotone fa-cart-shopping"></i>
+                <div class="counter">
+                    <h3>
+                        0
+                    </h3>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="background">
+                <svg id="wave" style="transform:rotate(180deg); transition: 0.3s" viewbox="0 0 1440 230" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
+                            <stop stop-color="rgba(191, 213, 185, 1)" offset="0%"></stop>
+                            <stop stop-color="rgba(255, 255, 255, 1)" offset="100%"></stop>
+                        </linearGradient>
+                    </defs>
+                    <path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,138L48,126.5C96,115,192,92,288,92C384,92,480,115,576,138C672,161,768,184,864,191.7C960,199,1056,192,1152,172.5C1248,153,1344,123,1440,92C1536,61,1632,31,1728,46C1824,61,1920,123,2016,138C2112,153,2208,123,2304,95.8C2400,69,2496,46,2592,65.2C2688,84,2784,146,2880,164.8C2976,184,3072,161,3168,161C3264,161,3360,184,3456,168.7C3552,153,3648,100,3744,65.2C3840,31,3936,15,4032,23C4128,31,4224,61,4320,76.7C4416,92,4512,92,4608,111.2C4704,130,4800,169,4896,153.3C4992,138,5088,69,5184,53.7C5280,38,5376,77,5472,99.7C5568,123,5664,130,5760,130.3C5856,130,5952,123,6048,107.3C6144,92,6240,69,6336,69C6432,69,6528,92,6624,95.8C6720,100,6816,84,6864,76.7L6912,69L6912,230L6864,230C6816,230,6720,230,6624,230C6528,230,6432,230,6336,230C6240,230,6144,230,6048,230C5952,230,5856,230,5760,230C5664,230,5568,230,5472,230C5376,230,5280,230,5184,230C5088,230,4992,230,4896,230C4800,230,4704,230,4608,230C4512,230,4416,230,4320,230C4224,230,4128,230,4032,230C3936,230,3840,230,3744,230C3648,230,3552,230,3456,230C3360,230,3264,230,3168,230C3072,230,2976,230,2880,230C2784,230,2688,230,2592,230C2496,230,2400,230,2304,230C2208,230,2112,230,2016,230C1920,230,1824,230,1728,230C1632,230,1536,230,1440,230C1344,230,1248,230,1152,230C1056,230,960,230,864,230C768,230,672,230,576,230C480,230,384,230,288,230C192,230,96,230,48,230L0,230Z"></path>
+                    <defs>
+                        <linearGradient id="sw-gradient-1" x1="0" x2="0" y1="1" y2="0">
+                            <stop stop-color="rgba(191, 213, 185, 1)" offset="0%"></stop>
+                            <stop stop-color="rgba(191, 213, 185, 1)" offset="100%"></stop>
+                        </linearGradient>
+                    </defs>
+                    <path style="transform:translate(0, 50px); opacity:0.9" fill="url(#sw-gradient-1)" d="M0,207L48,207C96,207,192,207,288,203.2C384,199,480,192,576,168.7C672,146,768,107,864,111.2C960,115,1056,161,1152,153.3C1248,146,1344,84,1440,65.2C1536,46,1632,69,1728,72.8C1824,77,1920,61,2016,65.2C2112,69,2208,92,2304,107.3C2400,123,2496,130,2592,134.2C2688,138,2784,138,2880,134.2C2976,130,3072,123,3168,99.7C3264,77,3360,38,3456,23C3552,8,3648,15,3744,26.8C3840,38,3936,54,4032,57.5C4128,61,4224,54,4320,65.2C4416,77,4512,107,4608,99.7C4704,92,4800,46,4896,34.5C4992,23,5088,46,5184,72.8C5280,100,5376,130,5472,153.3C5568,176,5664,192,5760,164.8C5856,138,5952,69,6048,69C6144,69,6240,138,6336,172.5C6432,207,6528,207,6624,184C6720,161,6816,115,6864,92L6912,69L6912,230L6864,230C6816,230,6720,230,6624,230C6528,230,6432,230,6336,230C6240,230,6144,230,6048,230C5952,230,5856,230,5760,230C5664,230,5568,230,5472,230C5376,230,5280,230,5184,230C5088,230,4992,230,4896,230C4800,230,4704,230,4608,230C4512,230,4416,230,4320,230C4224,230,4128,230,4032,230C3936,230,3840,230,3744,230C3648,230,3552,230,3456,230C3360,230,3264,230,3168,230C3072,230,2976,230,2880,230C2784,230,2688,230,2592,230C2496,230,2400,230,2304,230C2208,230,2112,230,2016,230C1920,230,1824,230,1728,230C1632,230,1536,230,1440,230C1344,230,1248,230,1152,230C1056,230,960,230,864,230C768,230,672,230,576,230C480,230,384,230,288,230C192,230,96,230,48,230L0,230Z"></path>
+                    <defs>
+                        <linearGradient id="sw-gradient-2" x1="0" x2="0" y1="1" y2="0">
+                            <stop stop-color="rgba(191, 213, 185, 1)" offset="0%"></stop>
+                            <stop stop-color="rgba(191, 213, 185, 1)" offset="100%"></stop>
+                        </linearGradient>
+                    </defs>
+                    <path style="transform:translate(0, 100px); opacity:0.8" fill="url(#sw-gradient-2)" d="M0,207L48,191.7C96,176,192,146,288,134.2C384,123,480,130,576,145.7C672,161,768,184,864,164.8C960,146,1056,84,1152,61.3C1248,38,1344,54,1440,49.8C1536,46,1632,23,1728,26.8C1824,31,1920,61,2016,95.8C2112,130,2208,169,2304,172.5C2400,176,2496,146,2592,115C2688,84,2784,54,2880,57.5C2976,61,3072,100,3168,115C3264,130,3360,123,3456,118.8C3552,115,3648,115,3744,118.8C3840,123,3936,130,4032,111.2C4128,92,4224,46,4320,46C4416,46,4512,92,4608,95.8C4704,100,4800,61,4896,49.8C4992,38,5088,54,5184,65.2C5280,77,5376,84,5472,88.2C5568,92,5664,92,5760,76.7C5856,61,5952,31,6048,38.3C6144,46,6240,92,6336,115C6432,138,6528,138,6624,118.8C6720,100,6816,61,6864,42.2L6912,23L6912,230L6864,230C6816,230,6720,230,6624,230C6528,230,6432,230,6336,230C6240,230,6144,230,6048,230C5952,230,5856,230,5760,230C5664,230,5568,230,5472,230C5376,230,5280,230,5184,230C5088,230,4992,230,4896,230C4800,230,4704,230,4608,230C4512,230,4416,230,4320,230C4224,230,4128,230,4032,230C3936,230,3840,230,3744,230C3648,230,3552,230,3456,230C3360,230,3264,230,3168,230C3072,230,2976,230,2880,230C2784,230,2688,230,2592,230C2496,230,2400,230,2304,230C2208,230,2112,230,2016,230C1920,230,1824,230,1728,230C1632,230,1536,230,1440,230C1344,230,1248,230,1152,230C1056,230,960,230,864,230C768,230,672,230,576,230C480,230,384,230,288,230C192,230,96,230,48,230L0,230Z"></path>
+                </svg>
+            </div>
+
+            <div
+                class="menu-container">
+                <div class="cards">
+                    <div class="card">
+                        <img src="https://foodish-api.herokuapp.com/images/rice/rice33.jpg" alt="image">
+                        <div class="info">
+                            <span>dish name</span>
+                            <span>100$</span>
+                        </div>
+                        <div class="payment">
+                            <div class="custom-input">
+                                <i class="fa-duotone fa-angle-up up-arrow"></i>
+                                <input class="input-num" type="number" min="0" max="15" value="1">
+                                <i class="fa-duotone fa-angle-down down-arrow"></i>
+                            </div>
+                            <i class="fa-duotone fa-cart-plus"></i>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="https://foodish-api.herokuapp.com/images/rice/rice33.jpg" alt="image">
+                        <div class="info">
+                            <span>dish name</span>
+                            <span>100$</span>
+                        </div>
+                        <div class="payment">
+                            <div class="custom-input">
+                                <i class="fa-duotone fa-angle-up up-arrow"></i>
+                                <input class="input-num" type="number" min="0" max="15" value="1">
+                                <i class="fa-duotone fa-angle-down down-arrow"></i>
+                            </div>
+                            <i class="fa-duotone fa-cart-plus"></i>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="https://foodish-api.herokuapp.com/images/rice/rice33.jpg" alt="image">
+                        <div class="info">
+                            <span>dish name</span>
+                            <span>100$</span>
+                        </div>
+                        <div class="payment">
+                            <div class="custom-input">
+                                <i class="fa-duotone fa-angle-up up-arrow"></i>
+                                <input class="input-num" type="number" min="0" max="15" value="1">
+                                <i class="fa-duotone fa-angle-down down-arrow"></i>
+                            </div>
+                            <i class="fa-duotone fa-cart-plus"></i>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="https://foodish-api.herokuapp.com/images/rice/rice33.jpg" alt="image">
+                        <div class="info">
+                            <span>dish name</span>
+                            <span>100$</span>
+                        </div>
+                        <div class="payment">
+                            <div class="custom-input">
+                                <i class="fa-duotone fa-angle-up up-arrow"></i>
+                                <input class="input-num" type="number" min="0" max="15" value="1">
+                                <i class="fa-duotone fa-angle-down down-arrow"></i>
+                            </div>
+                            <i class="fa-duotone fa-cart-plus"></i>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="https://foodish-api.herokuapp.com/images/rice/rice33.jpg" alt="image">
+                        <div class="info">
+                            <span>dish name</span>
+                            <span>100$</span>
+                        </div>
+                        <div class="payment">
+                            <div class="custom-input">
+                                <i class="fa-duotone fa-angle-up up-arrow"></i>
+                                <input class="input-num" type="number" min="0" max="15" value="1">
+                                <i class="fa-duotone fa-angle-down down-arrow"></i>
+                            </div>
+                            <i class="fa-duotone fa-cart-plus"></i>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="https://foodish-api.herokuapp.com/images/rice/rice33.jpg" alt="image">
+                        <div class="info">
+                            <span>dish name</span>
+                            <span>100$</span>
+                        </div>
+                        <div class="payment">
+                            <div class="custom-input">
+                                <i class="fa-duotone fa-angle-up up-arrow"></i>
+                                <input class="input-num" type="number" min="0" max="15" value="1">
+                                <i class="fa-duotone fa-angle-down down-arrow"></i>
+                            </div>
+                            <i class="fa-duotone fa-cart-plus"></i>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </main>
+            <script src="https://kit.fontawesome.com/ee25586ac1.js" crossorigin="anonymous"></script>
+        </body>
+    </body>
 </html>
