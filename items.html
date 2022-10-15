@@ -12,17 +12,17 @@
         <script src="script.js" defer></script>
         <title>Document</title>
     </head>
-    <body>
+    <body onload="checkItems()">
         <header>
             <h3>
-                <a href="">
+                <a href="index.html">
                     <i class="fa-duotone fa-store"></i>Shopping
                 </a>
             </h3>
             <h2>eDelicious Restaurant</h2>
             <div class="items-counter">
                 <i class="fa-duotone fa-cart-shopping"></i>
-                <div class="counter" >
+                <div class="counter" id="items-counter" >
                     <h3>
                         0
                     </h3>
@@ -56,27 +56,25 @@
                 </svg>
             </div>
             <div class="no-item-wrapper">
-                <div class="no-item">
+                <div class="no-item" id="empty">
                     <h3>Oops! Your cart is empty :(</h3>
-                    <h4>Looks like you haven't added
-                                                                                                 anything to your cart yet</h4>
-                    <button>Shop now</button>
+                    <h4>Looks like you haven't added anything to your cart yet</h4>
+                    <button onclick="goToIndexPage()">Shop now</button>
                 </div>
-                <div class="purchases-container">
+                <div class="purchases-container" id="added-items-container">
                     <div class="first-row">
                         <div class="div"></div>
                         <span class="product">Product</span>
                         <span class="price">Price</span>
                         <span class="quantity">Quantity</span>
-                    </div>
-                    <div class="second-row">
-                        <div class="image-container">
-                            <img src="image/a32e1755bb1e0a35e7ab7324efe396ca.jpg" alt="">
-                        </div>
-                        <span>Product</span>
-                        <span class="price">Price</span>
-                        <span class="quantity">Quantity</span>
+                        <span class="quantity">Total</span>
                         <i class="fa-duotone fa-trash-can"></i>
+                    </div>
+                    <div id="items-wrapper" class="item-wrapper">
+                        
+                    </div>
+                    <div class="total-price">
+                        <h3 id="total-price">Total Price : $</h3>
                     </div>
                 </div>
             </div>

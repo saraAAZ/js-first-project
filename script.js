@@ -41,6 +41,7 @@ let ITEMS = [
 
     }
 ];
+let totalPrice=0;
 let addedItems=[];
 let add ="+";
 let minus="-";
@@ -54,6 +55,7 @@ const loadItems = () => {
     }
     console.log(addedItems);
     drawAllItems();
+    checkItems();
 }
 const drawItem=(i)=>{
     document.getElementById("cards").innerHTML+=`  <div  class="card" id="card-${i}">
@@ -69,7 +71,6 @@ const drawItem=(i)=>{
         </button>
             <input class="input-num" type="number" min="0" max="15" value="1" id="input-value-${i}">
             <button id="down-b-${i}"><i id="down-${i}" class="fa-duotone fa-angle-down down-arrow"  onclick="displayItemsCounter(${i},minus)"></i></button>
-            
         </div>
         <button onclick="addItem(${i})"  id="add-${i}" >
         <i class="fa-duotone fa-cart-plus"  ></i>
@@ -112,14 +113,14 @@ const addItem=(i)=>{
 const calcValues=()=>{
     const calc = document.getElementById("items-counter");
     let temp=0;
-    let totalPrice=0;
     addedItems=JSON.parse(window.localStorage.getItem("items"));
+    totalPrice=0;
     for (let i = 0; i < addedItems.length; i++) {
         temp+=parseInt(addedItems[i].quantity);
         totalPrice+=parseInt(addedItems[i].quantity)*parseInt(addedItems[i].price);
     }
-    console.log(temp,totalPrice);
     calc.innerHTML=temp;
+    console.log(calc.innerHTML);
 }
 const checkIfAdded=()=>{
    if(window.localStorage.items!==undefined){
@@ -135,8 +136,7 @@ const checkIfAdded=()=>{
     }
    }else{
     console.log("sara");
-   }
-    
+   } 
 }
 const disableProperties=(i)=>{
     document.getElementById(`add-${i}`).disabled = true;
@@ -144,5 +144,59 @@ const disableProperties=(i)=>{
     document.getElementById(`up-b-${i}`).disabled = true;
     document.getElementById(`card-${i}`).classList.add("disabled");
 }
+// start working with items.html page
+const checkItems=()=>{
+    console.log("addedItems");
+    if( addedItems.length==0){
+        document.getElementById("empty").style.display="flex";       
+        document.getElementById("added-items-container").style.display="none";
+    }else{
+        console.log(addedItems);
+        document.getElementById("empty").style.display="none";       
+        document.getElementById("added-items-container").style.display="block";
+        drawAddedTasks();
+    }
+}
+const drawAddedTasks=()=>{
+    document.getElementById("items-wrapper").innerHTML="";
+    for (let i = 0; i < addedItems.length; i++) {
+        drawAddedItem(i);
+    }
+    updateTotalPrice();
 
+}
+const drawAddedItem=(i)=>{
+    document.getElementById("items-wrapper").innerHTML+=`<div class="second-row">
+    <div class="image-container">
+        <img src="${addedItems[i].image}" alt="">
+    </div>
+    <span>${addedItems[i].title}</span>
+    <span class="price">${addedItems[i].price}</span>
+    <span class="quantity">
+    ${addedItems[i].quantity}
+    </span>
+    <span class="quantity">${getTotal(i)}</span>
+    <i class="fa-duotone fa-trash-can trash" onclick="deleteItem(${i})"></i>
+</div>`    
+}
+const getTotal=(i)=>{
+    return parseInt(addedItems[i].quantity)*parseInt(addedItems[i].price);
+}
+const deleteItem=(i)=>{
+    addedItems.splice(i, 1);
+    console.log(addedItems);
+    localStorage.setItem("items", JSON.stringify(addedItems));
+    drawAddedTasks();
+    checkItems();
+    calcValues();
+    updateTotalPrice();
+
+}
+const goToIndexPage=()=>{
+    window.location.href = "index.html";
+}
+const updateTotalPrice=()=>{
+    document.getElementById("total-price").innerHTML=`Total Price : ${totalPrice}$`;
+}
 loadItems();
+
